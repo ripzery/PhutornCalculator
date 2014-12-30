@@ -1,0 +1,37 @@
+<link rel="import" href="bower_components/paper-input/paper-input-decorator.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
+<polymer-element name="post-card-2" attributes="value1 value2">
+  <template>
+    <style>
+    :host {
+      display:block;
+      background-color: white;
+      padding: 10px;
+      width:auto;
+      margin: 10px;
+      font-size: 1.2rem;
+      font-weight: 300; 
+   }
+    .card-header {
+      margin-bottom: 10px;
+    }
+    </style>
+        <h4>เลือกชนิดข้าว</h4>
+        <paper-radio-group id="rdgroup" selected="{{selection}}">
+            <paper-radio-button name="1" label="ข้าวเหนียว กข. 6" style="display:block;"></paper-radio-button>
+            <paper-radio-button  name="2" label="ข้าวเจ้ามะลิ 105" style="display:block;"></paper-radio-button>
+            <paper-radio-button name="3" label="ข้าวรวมเม็ดเล็ก " style="display:block;"></paper-radio-button>
+            <paper-radio-button name="4" label="ข้าวรวมเม็ดใหญ่ " style="display:block;"></paper-radio-button>
+            <paper-radio-button name="5" label="ข้าวอื่น ๆ " style="display:block;"></paper-radio-button>
+        </paper-radio-group>
+    <!-- CARD CONTENTS GO HERE -->
+  </template>
+    <script>
+        (function() {
+    Polymer('post-card-2',{
+      selection : '1'
+  })}()); 
+ </script>
+</polymer-element>

@@ -1,0 +1,46 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<polymer-element name="post-card-4" attributes="select">
+  <template>
+    <style>
+    :host {
+      display:inline-block;
+      background-color: white;
+      padding: 10px;
+      width: 180px;
+      margin: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    .card-header {
+      margin-bottom: 10px;
+    }
+    </style>
+    <strong style="display:block;">รูปแบบการคิดเงิน</strong>
+         <paper-radio-group selected="{{select}}">
+            <paper-radio-button name="1" label="คิดเป็นกิโลกรัม (ถอยราคาร้อยละ10)"></paper-radio-button><br/>
+            <paper-radio-button name="2" label="คิดเป็นหมื่นโดยถอยนน.ร้อยละ "></paper-radio-button>
+        </paper-radio-group>
+            <div id="inputType" style="">
+                <strong>ถอยร้อยละ <span style="color:red">*</span></strong>
+                <paper-input-decorator label="ร้อยละ"><input is="core-input" maxlength="5" value="{{percent}}" style="margin-top:-15px;display:inline-block;text-align:center;"></paper-input-decorator>
+            </div>
+            
+         
+         <!--<input id="saveForm" class="button_text" type="submit" name="submit" value="คำนวณ" />-->
+         
+    <!-- CARD CONTENTS GO HERE -->
+  </template>
+    <script>
+  Polymer("post-card-4",{
+      select : "1",
+      percent : "10"
+//      selectChanged : function(oldValue,newValue){
+//          if(newValue==="2"){
+//              this.$.inputType.style.display = "";
+//          }else{
+//              this.$.inputType.style.display = "none";
+//          }
+//      }
+  });
+  </script>
+</polymer-element>

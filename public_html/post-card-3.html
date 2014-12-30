@@ -1,0 +1,50 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<polymer-element name="post-card-3" attributes="select">
+  <template>
+    <style>
+    :host {
+      display:inline-block;
+      background-color: white;
+      padding: 10px;
+      width: 230px;
+      margin: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    .card-header {
+      margin-bottom: 10px;
+    }
+    </style>
+    <br /><strong >ระบุน้ำหนักข้าว <span style="color:red">*</span>  </strong><paper-input-decorator label="กิโลกรัม"><input is="core-input" value="{{weight}}" style="margin-top:-15px;display:inline-block;text-align:center;"></paper-input-decorator>
+         <br /><strong>ค่ารถ ?</strong><br />
+         <paper-radio-group selected="{{select}}" on-change="{{tickChange}}">
+            <paper-radio-button name="1" label="ไม่มีค่ารถ "></paper-radio-button><br/>
+            <paper-radio-button name="2" label="มีค่ารถ "></paper-radio-button>
+        </paper-radio-group>
+            <div id="feeInfo">
+                <strong>จำนวนกระสอบ <span style="color:red">*</span></strong>
+                <paper-input-decorator label="จำนวนกระสอบ"><input is="core-input" maxlength="5" value="{{sackCount}}" style="margin-top:-15px;display:inline-block;text-align:center;"></paper-input-decorator>
+                <strong>หักค่ารถกระสอบละ <span style="color:red">*</span></strong>
+                <paper-input-decorator label="ค่ารถกระสอบละ"><input is="core-input" maxlength="5" value="{{feePerSack}}" style="margin-top:-15px;display:inline-block;text-align:center;"></paper-input-decorator>
+                <strong>เปอร์เซ็นต์กระสอบละ <span style="color:red">*</span></strong>
+                <paper-input-decorator label="เปอร์เซ็นต์กระสอบละ"><input is="core-input" maxlength="5" value="{{percentPerSack}}" style="margin-top:-15px;display:inline-block;text-align:center;"></paper-input-decorator>
+            </div>
+            
+         
+  </template>
+    <script>
+  Polymer("post-card-3",{
+       select : "1",
+       weight : "",
+       feePerSack : "15",
+       percentPerSack : "5"
+//       selectChanged : function(oldValue,newValue){
+//           if(newValue === "2"){
+//               this.$.feeInfo.style.display="";
+//           }else{
+//               this.$.feeInfo.style.display="none";
+//           }
+//       }
+  });
+  </script>
+</polymer-element>

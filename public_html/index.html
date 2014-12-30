@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>ภูธรพืชผล</title>
+      <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+      <link rel="import" href="bower_components/core-icons/maps-icons.html"></link>
+      <link rel="import"
+         href="bower_components/core-header-panel/core-header-panel.html">
+      </link>
+      <link rel="import"
+         href="bower_components/paper-radio-group/paper-radio-group.html">
+      </link>
+      <link rel="import"
+         href="bower_components/core-toolbar/core-toolbar.html">
+      </link>
+      <link rel="import"
+         href="bower_components/core-media-query/core-media-query.html">
+      </link>
+      <link rel="import"
+         href="bower_components/core-icon/core-icon.html">
+      </link>
+      <link rel="import"
+         href="bower_components/paper-button/paper-button.html">
+      </link>
+      <link rel="import"
+         href="bower_components/paper-fab/paper-fab.html">
+      </link>
+      <link rel="import"
+         href="bower_components/paper-icon-button/paper-icon-button.html">
+      </link>
+      <link rel="import" href="post-card-2.html"></link>
+      <link rel="import" href="post-card-3.html"></link>
+      <link rel="import" href="post-card-1.html"></link>
+      <link rel="import" href="post-card-4.html"></link>
+      <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+      <script type="text/javascript" src="calc.js"></script>
+      <style>
+         @font-face {
+         font-family: myFirstFont;
+         src: url(font-rsu/RSU_Regular.ttf);
+         }
+         html,body {
+         height: 100%;
+         margin: 0;
+         width:100%;
+         background-color: #E5E5E5;
+         font-size : 20px;
+         font-family: myFirstFont;
+         }
+         core-header-panel {
+         height: 100%;
+         overflow: auto;
+         -webkit-overflow-scrolling: touch;
+         }
+         core-toolbar {
+         background: #03a9f4;
+         color: white;
+         }
+         paper-button {
+             background: white;
+             font-size : 25px;
+             margin-bottom : 20px;
+             width:70px;
+             height:50px;
+         }
+          paper-icon-button /deep/ core-icon[role=img] {
+            /*margin-top: 32px;*/
+            height: 48px;
+            width: 48px;
+          }
+      </style>
+   </head>
+   <body id="main_body">
+      <core-header-panel flex>
+         <core-toolbar class="medium-tall">
+            <span flex>ภูธรพืชผล</span>
+            <paper-icon-button class="top indent" id="favourite"
+        icon="maps:local-atm" onclick="initialize()"></paper-icon-button>
+            <div class="middle indent" style="margin-left:10px" id="output">Output here</div>
+         </core-toolbar>
+             <div horizontal layout wrap style="width:100%">
+                 <div><post-card-1></post-card-1></div>
+                 <div ><post-card-2></post-card-2></div>
+                 <div ><post-card-3></post-card-3></div>
+                 <div><post-card-4></post-card-4></div>
+            </div>
+      </core-header-panel>
+   </body>
+</html>
